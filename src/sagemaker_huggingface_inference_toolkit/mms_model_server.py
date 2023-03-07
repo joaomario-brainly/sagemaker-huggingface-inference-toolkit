@@ -45,7 +45,12 @@ logger = logging.get_logger()
 
 DEFAULT_HANDLER_SERVICE = handler_service.__name__
 
-DEFAULT_HF_HUB_MODEL_EXPORT_DIRECTORY = os.path.join(os.getcwd(), ".sagemaker/mms/models")
+# DEFAULT_HF_HUB_MODEL_EXPORT_DIRECTORY = os.path.join(os.getcwd(), ".sagemaker/mms/models")
+
+EBS_VOLUME_PATH  = "/home/ec2-user/SageMaker/"
+
+DEFAULT_HF_HUB_MODEL_EXPORT_DIRECTORY = os.path.join(EBS_VOLUME_PATH, ".sagemaker/mms/models")
+
 DEFAULT_MODEL_STORE = "/"
 
 
